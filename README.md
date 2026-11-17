@@ -90,8 +90,19 @@ La sélection d’une déclaration de référence ne permet pas nécessairement 
 - Actualiser les données pour suivre l'évolution des infrastructures.
 
 ---
-## Aperçu du tableau de bord
+## Aperçu des visualisations
 
-![Tableau de bord général des infrastructures de recharge](images/tableau-de-bord-general.png)
+### 1. Vue générale des infrastructures
+
+![Tableau de bord général IRVE](images/tableau-de-bord-general.png)
+
+### 2. Analyse des puissances
+
+![Analyse des puissances nominales](images/analyse-puissances.png)
+
+### 3. Accessibilité et services
+
+![Analyse de l'accessibilité et des services](images/accessibilite-services.png)
+
 
 *Projet de data analyse réalisé avec MySQL et Tableau Desktop.*
