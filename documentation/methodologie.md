@@ -67,3 +67,34 @@ Ces résultats décrivent les données analysées et ne constituent pas nécessa
 
 Le dépôt a vocation à documenter les étapes de préparation et d'analyse. Les scripts SQL et le classeur Tableau pourront être ajoutés après vérification et retrait de toute information confidentielle, notamment les identifiants de connexion et mots de passe.
 
+## Analyse exploratoire par clustering
+
+### Objectif
+
+Le clustering vise à regrouper automatiquement les points de charge selon leur puissance nominale afin d’identifier différents profils de recharge dans les infrastructures IRVE.
+
+### Préparation des données
+
+L’analyse a été réalisée dans Tableau Desktop à partir de la table nettoyée `irve_clean`. Les points dont la puissance nominale est nulle ont été exclus de cette analyse, car ils ne permettent pas de caractériser le niveau de puissance de recharge.
+
+### Réalisation
+
+Un graphique de dispersion a été créé dans Tableau, avec la puissance nominale en abscisse et le nombre de points de charge en ordonnée. L’identifiant du point de charge a été utilisé pour distinguer les observations.
+
+L’algorithme de clustering intégré à Tableau a ensuite été appliqué avec trois groupes. Les résultats ont été visualisés à l’aide de couleurs distinctes afin de faciliter la comparaison des groupes.
+
+### Résultats
+
+Sur les 53 565 points de charge analysés, trois groupes ont été obtenus :
+
+- **Cluster 1 :** 43 360 points, soit 80,9 %.
+- **Cluster 2 :** 6 420 points, soit 12,0 %.
+- **Cluster 3 :** 3 785 points, soit 7,1 %.
+
+Le premier groupe rassemble la majorité des observations. Les deux autres groupes représentent des ensembles plus restreints.
+
+### Limites d’interprétation
+
+Cette classification est exploratoire. Les groupes dépendent des variables et des paramètres choisis dans Tableau. Ils ne constituent pas des catégories réglementaires.
+
+Les centres de clusters affichés par Tableau étant normalisés, ils ne doivent pas être interprétés directement comme des puissances en kilowatts. Une analyse complémentaire des puissances réelles de chaque groupe est nécessaire pour caractériser précisément les profils obtenus.
