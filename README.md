@@ -90,5 +90,8 @@ La sélection d’une déclaration de référence ne permet pas nécessairement 
 - Actualiser les données pour suivre l'évolution des infrastructures.
 
 ---
+## Aperçu du tableau de bord
+
+![Tableau de bord général des infrastructures de recharge](images/tableau-de-bord-general.png)
 
 *Projet de data analyse réalisé avec MySQL et Tableau Desktop.*
