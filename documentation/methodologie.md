@@ -83,18 +83,24 @@ Un graphique de dispersion a été créé dans Tableau, avec la puissance nomina
 
 L’algorithme de clustering intégré à Tableau a ensuite été appliqué avec trois groupes. Les résultats ont été visualisés à l’aide de couleurs distinctes afin de faciliter la comparaison des groupes.
 
-### Résultats
+## Résultats du clustering des puissances
 
-Sur les 53 565 points de charge analysés, trois groupes ont été obtenus :
+Le clustering réalisé dans Tableau a permis de distinguer trois groupes de points de charge selon leur profil de puissance nominale.
 
-- **Cluster 1 :** 43 360 points, soit 80,9 %.
-- **Cluster 2 :** 6 420 points, soit 12,0 %.
-- **Cluster 3 :** 3 785 points, soit 7,1 %.
+Les statistiques ci-dessous sont calculées après exclusion des points dont la puissance nominale est nulle.
 
-Le premier groupe rassemble la majorité des observations. Les deux autres groupes représentent des ensembles plus restreints.
+| Cluster | Nombre de points | Puissance moyenne | Puissance minimale | Puissance maximale |
+|---|---:|---:|---:|---:|
+| Cluster 1 | 38 655 | 20,98 kW | 1 kW | 82 kW |
+| Cluster 2 | 6 420 | 147,18 kW | 87 kW | 232 kW |
+| Cluster 3 | 3 785 | 320,87 kW | 240 kW | 1 500 kW |
 
-### Limites d’interprétation
+### Interprétation
 
-Cette classification est exploratoire. Les groupes dépendent des variables et des paramètres choisis dans Tableau. Ils ne constituent pas des catégories réglementaires.
+- **Cluster 1 :** groupe caractérisé par des puissances plutôt faibles, avec une moyenne de 20,98 kW.
+- **Cluster 2 :** groupe de puissances intermédiaires à élevées, avec une moyenne de 147,18 kW.
+- **Cluster 3 :** groupe de puissances élevées à très élevées, avec une moyenne de 320,87 kW.
 
-Les centres de clusters affichés par Tableau étant normalisés, ils ne doivent pas être interprétés directement comme des puissances en kilowatts. Une analyse complémentaire des puissances réelles de chaque groupe est nécessaire pour caractériser précisément les profils obtenus.
+Cette segmentation est exploratoire. Les groupes sont issus du clustering automatique de Tableau et ne correspondent pas nécessairement à des catégories réglementaires officielles.
+
+Les effectifs présentés ici diffèrent de ceux du clustering initial, car les points de puissance nulle ont été exclus pour calculer les statistiques descriptives.
