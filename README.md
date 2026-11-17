@@ -147,3 +147,20 @@ Les résultats doivent être interprétés comme une analyse exploratoire. Les v
 ### Visualisation des clusters
 
 ![Clustering des puissances des points de charge IRVE](images/clustering-puissances.png)
+
+### Résultats du clustering des puissances
+
+Une analyse exploratoire réalisée dans Tableau a permis d'identifier trois groupes de points de charge selon leur puissance nominale.
+
+| Cluster | Nombre de points avec puissance positive | Puissance moyenne |
+|---|---:|---:|
+| Cluster 1 | 38 655 | 20,98 kW |
+| Cluster 2 | 6 420 | 147,18 kW |
+| Cluster 3 | 3 785 | 320,87 kW |
+
+**Principaux enseignements :**
+- Le cluster 1 regroupe les points de charge aux puissances les plus faibles.
+- Le cluster 2 correspond à des puissances intermédiaires à élevées.
+- Le cluster 3 rassemble les points de charge les plus puissants, avec un maximum observé de 1 500 kW.
+
+Ces résultats sont exploratoires et ne constituent pas des catégories réglementaires officielles. Les statistiques présentées excluent les points dont la puissance nominale est nulle.
