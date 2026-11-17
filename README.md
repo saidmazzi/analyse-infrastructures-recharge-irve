@@ -143,3 +143,7 @@ Les résultats doivent être interprétés comme une analyse exploratoire. Les v
 - Tableau Desktop pour la visualisation et le clustering.
 - GitHub pour la documentation et le suivi du projet.
 *Projet de data analyse réalisé avec MySQL et Tableau Desktop.*
+
+### Visualisation des clusters
+
+![Clustering des puissances des points de charge IRVE](images/clustering-puissances.png)
