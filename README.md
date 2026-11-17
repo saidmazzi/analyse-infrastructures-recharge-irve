@@ -104,5 +104,42 @@ La sélection d’une déclaration de référence ne permet pas nécessairement 
 
 ![Analyse de l'accessibilité et des services](images/accessibilite-services.png)
 
+## Analyse exploratoire par clustering
 
+### Objectif
+
+Une analyse exploratoire par clustering a été réalisée dans Tableau afin de regrouper les points de charge IRVE selon leur puissance nominale. L’objectif est d’identifier différents profils de puissance et de mieux caractériser les équipements présents dans la base.
+
+### Méthode
+
+- Analyse réalisée à partir de la table nettoyée `irve_clean`.
+- Exclusion des points dont la puissance nominale est nulle pour cette analyse.
+- Utilisation de l’algorithme de clustering intégré à Tableau.
+- Création de trois groupes à partir de la puissance nominale.
+- Visualisation des groupes dans un graphique de dispersion et un tableau de bord dédié.
+
+### Résultats
+
+L’analyse porte sur 53 565 points de charge et distingue trois groupes :
+
+| Groupe | Nombre de points | Part du total |
+|---|---:|---:|
+| Cluster 1 | 43 360 | 80,9 % |
+| Cluster 2 | 6 420 | 12,0 % |
+| Cluster 3 | 3 785 | 7,1 % |
+| **Total** | **53 565** | **100 %** |
+
+Le premier groupe est largement majoritaire. Les deux autres groupes regroupent des proportions plus faibles de points de charge.
+
+### Interprétation et limites
+
+Le clustering permet de faire ressortir des groupes présentant des profils de puissance différents. Ces groupes sont produits automatiquement par l’algorithme et ne correspondent pas nécessairement à des seuils réglementaires ou à des catégories officielles de recharge.
+
+Les résultats doivent être interprétés comme une analyse exploratoire. Les valeurs centrales affichées par Tableau sont normalisées et ne correspondent pas directement à des puissances exprimées en kilowatts.
+
+### Outils utilisés
+
+- MySQL et Navicat pour la préparation et l’exploration des données.
+- Tableau Desktop pour la visualisation et le clustering.
+- GitHub pour la documentation et le suivi du projet.
 *Projet de data analyse réalisé avec MySQL et Tableau Desktop.*
