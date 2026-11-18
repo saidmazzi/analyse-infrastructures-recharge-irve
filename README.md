@@ -129,7 +129,7 @@ L’analyse porte sur 53 565 points de charge et distingue trois groupes :
 | Cluster 3 | 3 785 | 7,1 % |
 | **Total** | **53 565** | **100 %** |
 
-Le premier groupe est largement majoritaire. Les deux autres groupes regroupent des proportions plus faibles de points de charge.
+Les résultats détaillés sont présentés dans le tableau de bord dédié au clustering. Les effectifs et les puissances moyennes ci-dessous sont calculés en excluant les points dont la puissance nominale est nulle ou négative.
 
 ### Interprétation et limites
 
