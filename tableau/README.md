@@ -2,20 +2,16 @@
 
 Ce dossier est destiné à contenir les classeurs Tableau Desktop associés au projet IRVE.
 
-## Contenu prévu
+## Contenu du projet
 
-Le classeur présente trois axes d'analyse :
+Le projet Tableau comprend trois axes d'analyse principaux :
 
 1. **Vue générale des infrastructures** : indicateurs clés, répartition géographique et principaux opérateurs.
-2. **Analyse des puissances** : distribution des puissances nominales et comparaison des catégories de puissance.
-3. **Accessibilité et services** : accessibilité PMR, paiement par carte bancaire et statut de gratuité.
+2. **Analyse des puissances** : distribution des puissances nominales, comparaison des catégories de puissance et identification des valeurs extrêmes.
+3. **Accessibilité et services** : accessibilité PMR, disponibilité déclarée du paiement par carte bancaire et statut de gratuité.
 
-L'histoire Tableau permet de parcourir ces analyses dans un ordre logique.
+Une analyse exploratoire complémentaire a également été réalisée :
 
-## Format des fichiers
+4. **Clustering des puissances** : regroupement exploratoire des points de charge selon leur puissance nominale, avec visualisation des clusters et comparaison de leurs statistiques.
 
-Le classeur peut être partagé au format `.twb` ou `.twbx`.
-
-Le format `.twbx` est généralement préférable pour le partage lorsqu'il faut inclure des ressources associées. Avant publication, vérifier toutefois les données intégrées, les connexions et les informations sensibles.
-
-Le fichier du classeur sera ajouté après vérification.
+L'histoire Tableau permet de parcourir les analyses principales dans un ordre logique. Le dashboard de clustering complète cette exploration en proposant une lecture statistique des profils de puissance.
