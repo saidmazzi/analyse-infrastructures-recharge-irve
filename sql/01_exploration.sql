@@ -72,3 +72,21 @@ SELECT
     SUM(conflit_station = 1) AS conflits_station,
     SUM(conflit_coordonnees = 1) AS conflits_coordonnees
 FROM irve_clean;
+
+
+-- 8. Statistiques de puissance par cluster
+-- Les puissances nulles ou negatives sont exclues.
+-- Les clusters proviennent de l'export Tableau importe dans clusters_irve.
+
+SELECT
+    f1 AS cluster,
+    COUNT(*) AS nombre_points_charge,
+    ROUND(AVG(CAST(f2 AS DECIMAL(10,2))), 2)
+        AS puissance_moyenne_kw,
+    MIN(CAST(f2 AS DECIMAL(10,2))) AS puissance_min_kw,
+    MAX(CAST(f2 AS DECIMAL(10,2))) AS puissance_max_kw
+FROM clusters_irve
+WHERE f1 IN ('Cluster 1', 'Cluster 2', 'Cluster 3')
+  AND CAST(f2 AS DECIMAL(10,2)) > 0
+GROUP BY f1
+ORDER BY f1;
