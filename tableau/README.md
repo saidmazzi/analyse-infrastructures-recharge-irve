@@ -14,4 +14,6 @@ Une analyse exploratoire complémentaire a également été réalisée :
 
 4. **Clustering des puissances** : regroupement exploratoire des points de charge selon leur puissance nominale, avec visualisation des clusters et comparaison de leurs statistiques.
 
-Les classeurs Tableau Desktop ne sont pas encore inclus dans ce dépôt. Les captures des tableaux de bord sont disponibles dans le dossier `images/` pour illustrer les analyses réalisées.
+Le classeur Tableau `IRVE_Analyse_clusters.twbx` est disponible dans ce dossier. Il contient les tableaux de bord d’analyse IRVE, dont le tableau de bord complémentaire consacré au clustering exploratoire des puissances.
+
+**Pour consulter le classeur :** cliquez sur `IRVE_Analyse_clusters.twbx`, puis sur **Download** pour le télécharger. L’ouverture dans Tableau Desktop peut nécessiter une adaptation de la connexion aux données MySQL.
