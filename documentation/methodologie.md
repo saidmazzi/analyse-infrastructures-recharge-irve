@@ -75,8 +75,7 @@ Le clustering vise à regrouper automatiquement les points de charge selon leur 
 
 ### Préparation des données
 
-L’analyse a été réalisée dans Tableau Desktop à partir de la table nettoyée `irve_clean`. Les points dont la puissance nominale est nulle ont été exclus de cette analyse, car ils ne permettent pas de caractériser le niveau de puissance de recharge.
-
+L’analyse a été réalisée dans Tableau Desktop à partir de la table nettoyée `irve_clean`. Les points dont la puissance nominale est nulle ou négative ont été exclus du calcul des statistiques descriptives du clustering, car ces valeurs ne permettent pas de caractériser de manière pertinente le niveau de puissance de recharge.
 ### Réalisation
 
 Un graphique de dispersion a été créé dans Tableau, avec la puissance nominale en abscisse et le nombre de points de charge en ordonnée. L’identifiant du point de charge a été utilisé pour distinguer les observations.
