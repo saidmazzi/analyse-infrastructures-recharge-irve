@@ -49,10 +49,14 @@ Le dictionnaire ci-dessous présente les principaux champs utilisés dans les an
 
 ## Qualité et interprétation
 
-- Une valeur manquante ne doit pas être assimilée à une réponse négative.
-- Les identifiants fiables sont utilisés pour compter les points de charge distincts.
-- Des déclarations contradictoires peuvent exister pour certaines caractéristiques.
-- Les coordonnées et autres attributs doivent être interprétés selon les limites de la source.
+- Les identifiants fiables `id_pdc_itinerance` servent à identifier les points de charge distincts dans l'analyse principale.
+- La table brute `irve_brut` est conservée afin de préserver les déclarations d'origine.
+- La table analytique `irve_clean` contient une déclaration de référence par identifiant fiable retenu pour l'analyse.
+- Les champs `nombre_declarations` et `score_completude` contribuent à documenter les déclarations multiples et la complétude des données.
+- Les champs `conflit_adresse`, `conflit_puissance`, `conflit_station` et `conflit_coordonnees` signalent les conflits détectés lors du traitement.
+- Une valeur manquante ou inconnue ne doit pas être assimilée à une réponse négative.
+- Les indicateurs de paiement, de gratuité et d'accessibilité décrivent les informations déclarées et doivent être interprétés selon leur codage et les limites de la source.
+- Les résultats dépendent des données disponibles et des règles de nettoyage appliquées ; ils ne garantissent pas l'exhaustivité de toutes les infrastructures existantes.
 
 ## Note méthodologique
 
