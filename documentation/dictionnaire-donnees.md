@@ -35,6 +35,8 @@ Le dictionnaire ci-dessous présente les principaux champs utilisés dans les an
 - Des déclarations contradictoires peuvent exister pour certaines caractéristiques.
 - Les coordonnées et autres attributs doivent être interprétés selon les limites de la source.
 
-## Note
+## Note méthodologique
 
-Les noms de colonnes et leur description exacte doivent être confrontés à la structure effective de `irve_clean` avant publication définitive. Certaines colonnes peuvent porter un nom différent dans la version utilisée du jeu de données.
+Ce dictionnaire décrit les principaux champs fonctionnels utilisés dans le projet. Les noms présentés doivent être vérifiés par rapport à la structure effective de la table `irve_clean`.
+
+Les noms de colonnes indiqués dans les requêtes SQL constituent la référence pour les champs effectivement utilisés dans les analyses. Toute différence de nom entre le jeu de données source, la table nettoyée et la documentation doit être explicitée avant publication définitive.
