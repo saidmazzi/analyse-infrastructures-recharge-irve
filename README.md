@@ -148,9 +148,9 @@ Les résultats doivent être interprétés comme une analyse exploratoire. Les v
 
 ![Clustering des puissances des points de charge IRVE](images/clustering-puissances.png)
 
-### Résultats du clustering des puissances
+### Clustering exploratoire des puissances de recharge
 
-Une analyse exploratoire réalisée dans Tableau a permis d'identifier trois groupes de points de charge selon leur puissance nominale.
+Une analyse exploratoire réalisée dans Tableau a permis d’identifier trois groupes de points de charge selon leur puissance nominale, afin de mieux comprendre la répartition des niveaux de puissance au sein des infrastructures de recharge pour véhicules électriques (IRVE).
 
 | Cluster | Nombre de points avec puissance positive | Puissance moyenne |
 |---|---:|---:|
@@ -159,8 +159,9 @@ Une analyse exploratoire réalisée dans Tableau a permis d'identifier trois gro
 | Cluster 3 | 3 785 | 320,87 kW |
 
 **Principaux enseignements :**
-- Le cluster 1 regroupe les points de charge aux puissances les plus faibles.
-- Le cluster 2 correspond à des puissances intermédiaires à élevées.
-- Le cluster 3 rassemble les points de charge les plus puissants, avec un maximum observé de 1 500 kW.
 
-Ces résultats sont exploratoires et ne constituent pas des catégories réglementaires officielles. Les statistiques présentées excluent les points dont la puissance nominale est nulle.
+- **Cluster 1 :** regroupe les points de charge aux puissances les plus faibles.
+- **Cluster 2 :** correspond à des puissances intermédiaires à élevées.
+- **Cluster 3 :** rassemble les points de charge les plus puissants, avec un maximum observé de 1 500 kW.
+
+Cette analyse est exploratoire : les clusters décrivent des regroupements statistiques et ne constituent pas des catégories réglementaires officielles. Les statistiques présentées excluent les points dont la puissance nominale est nulle ou négative.
