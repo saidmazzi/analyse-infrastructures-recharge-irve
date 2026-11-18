@@ -34,7 +34,7 @@ Les coordonnées atypiques ont été conservées : une valeur géographique inha
 
 ## 5. Analyses réalisées dans Tableau
 
-Le classeur Tableau comprend trois tableaux de bord :
+Les analyses réalisées dans Tableau comprennent trois tableaux de bord principaux ainsi qu'un tableau de bord complémentaire consacré au clustering exploratoire des puissances :
 
 1. **Vue générale des infrastructures** : cartographie, indicateurs clés et exploration par territoire et caractéristiques.
 2. **Analyse des puissances** : distribution des puissances nominales et répartition par catégories de puissance.
