@@ -56,6 +56,8 @@ Trois axes d’analyse ont été développés dans Tableau :
 - Disponibilité déclarée du paiement par carte bancaire.
 - Statut de gratuité : gratuit, non gratuit ou inconnu.
 
+Une analyse exploratoire complémentaire a également été réalisée dans Tableau avec un quatrième tableau de bord consacré au clustering des puissances. Il permet de visualiser trois groupes de points de charge et de comparer leurs statistiques descriptives.
+
 ## Principaux résultats
 
 Le traitement a permis de construire une table analytique contenant **53 565 points de charge distincts identifiés par un identifiant fiable**.
@@ -120,17 +122,7 @@ Une analyse exploratoire par clustering a été réalisée dans Tableau afin de 
 
 ### Résultats
 
-L’analyse porte sur 53 565 points de charge et distingue trois groupes :
-
-| Groupe | Nombre de points | Part du total |
-|---|---:|---:|
-| Cluster 1 | 43 360 | 80,9 % |
-| Cluster 2 | 6 420 | 12,0 % |
-| Cluster 3 | 3 785 | 7,1 % |
-| **Total** | **53 565** | **100 %** |
-
-Les résultats détaillés sont présentés dans le tableau de bord dédié au clustering. Les effectifs et les puissances moyennes ci-dessous sont calculés en excluant les points dont la puissance nominale est nulle ou négative.
-
+Le clustering initial réalisé dans Tableau distingue trois groupes. Les statistiques descriptives présentées ci-dessous sont calculées séparément, en excluant les points dont la puissance nominale est nulle ou négative. Cette distinction permet de différencier les résultats du clustering initial des statistiques calculées sur les seules puissances positives.
 ### Interprétation et limites
 
 Le clustering permet de faire ressortir des groupes présentant des profils de puissance différents. Ces groupes sont produits automatiquement par l’algorithme et ne correspondent pas nécessairement à des seuils réglementaires ou à des catégories officielles de recharge.
