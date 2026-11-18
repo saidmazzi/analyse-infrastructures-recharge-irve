@@ -6,27 +6,46 @@ La table `irve_clean` contient les données préparées pour l'analyse des infra
 
 Le dictionnaire ci-dessous présente les principaux champs utilisés dans les analyses MySQL et Tableau. Il décrit leur signification fonctionnelle ; les types SQL exacts doivent être vérifiés dans la structure de la table.
 
-| Champ | Signification | Utilisation |
-|---|---|---|
-| `id_pdc_itinerance` | Identifiant du point de charge | Identifier et compter les points distincts |
-| `id_station_itinerance` | Identifiant de la station | Regrouper les points par station |
-| `nom_station` | Nom de la station | Identifier les sites de recharge |
-| `nom_operateur` | Nom de l'opérateur | Comparer les opérateurs |
-| `adresse_station` | Adresse de la station | Localiser les infrastructures |
-| `code_insee_commune` | Code INSEE de la commune | Analyse géographique |
-| `code_postal` | Code postal | Analyse territoriale |
-| `nom_commune` | Nom de la commune | Filtres et analyses locales |
-| `coordonnees_xy` ou champs de coordonnées | Coordonnées géographiques | Cartographie dans Tableau |
-| `puissance_nominale` | Puissance nominale déclarée, en kW | Analyse des puissances |
-| `nbre_pdc` | Nombre de points de charge déclaré ou associé selon la source | Contexte de station |
-| `type_prise` | Type de prise ou connecteur déclaré | Analyse des équipements |
-| `gratuit` | Indication de gratuité | Analyse du statut de gratuité |
-| `paiement_cb` | Indication de disponibilité du paiement par carte bancaire | Analyse des services |
-| `reservation` | Indication relative à la réservation | Analyse des services |
-| `accessibilite_pmr` | Information sur l'accessibilité aux personnes à mobilité réduite | Analyse de l'accessibilité |
-| `date_mise_en_service` | Date de mise en service déclarée | Analyse temporelle, si exploitable |
-| `date_maj` | Date de mise à jour de la donnée | Suivi de l'actualité de l'information |
-| `last_modified` | Horodatage de modification disponible | Aide à la sélection d'une déclaration de référence |
+| Champ | Type SQL | Signification | Utilisation |
+|---|---|---|---|
+| `id_pdc_itinerance` | `varchar(255)` | Identifiant du point de charge itinérant | Identifier et compter les points distincts |
+| `id_station_itinerance` | `varchar(255)` | Identifiant de la station | Regrouper les points par station |
+| `ressource_reference` | `varchar(255)` | Référence de la ressource source | Traçabilité des données |
+| `nom_station` | `varchar(255)` | Nom de la station | Identifier les sites de recharge |
+| `nom_operateur` | `varchar(255)` | Nom de l'opérateur | Comparer les opérateurs |
+| `adresse_station` | `varchar(255)` | Adresse déclarée de la station | Localisation et contrôle des adresses |
+| `code_insee_commune` | `int` | Code INSEE de la commune | Analyse géographique |
+| `code_postal` | `int` | Code postal | Analyse territoriale |
+| `commune` | `varchar(255)` | Nom de la commune | Filtres et analyses locales |
+| `departement` | `varchar(255)` | Département déclaré | Analyse territoriale |
+| `region` | `varchar(255)` | Région déclarée | Analyse territoriale |
+| `longitude` | `double` | Longitude géographique | Cartographie |
+| `latitude` | `double` | Latitude géographique | Cartographie |
+| `nbre_pdc` | `int` | Nombre de points de charge déclaré | Contexte de station |
+| `puissance_nominale` | `double` | Puissance nominale déclarée, en kW | Analyse des puissances |
+| `prise_ef` | `int` | Indicateur de présence de prises EF | Analyse des types de prises |
+| `prise_type_2` | `int` | Indicateur de présence de prises Type 2 | Analyse des types de prises |
+| `prise_ccs` | `int` | Indicateur de présence de prises CCS | Analyse des types de prises |
+| `prise_chademo` | `int` | Indicateur de présence de prises CHAdeMO | Analyse des types de prises |
+| `prise_autre` | `int` | Indicateur de présence d'autres prises | Analyse des types de prises |
+| `gratuit` | `int` | Indicateur de gratuité | Analyse du statut de gratuité |
+| `paiement_acte` | `int` | Indicateur de paiement à l'acte | Analyse des moyens de paiement |
+| `paiement_cb` | `int` | Indicateur de disponibilité du paiement par carte bancaire | Analyse des services |
+| `paiement_autre` | `int` | Indicateur d'autres moyens de paiement | Analyse des services |
+| `reservation` | `int` | Indicateur de réservation | Analyse des services |
+| `accessibilite_pmr` | `varchar(26)` | Information déclarée sur l'accessibilité PMR | Analyse de l'accessibilité |
+| `condition_acces` | `varchar(255)` | Conditions d'accès déclarées | Analyse des conditions d'accès |
+| `horaires` | `varchar(255)` | Horaires déclarés | Information sur l'accès aux équipements |
+| `tarification` | `varchar(255)` | Informations tarifaires déclarées | Analyse des tarifs |
+| `date_mise_en_service` | `varchar(255)` | Date de mise en service déclarée | Analyse temporelle, si exploitable |
+| `date_maj` | `date` | Date de mise à jour de la donnée | Suivi de l'actualité de l'information |
+| `last_modified` | `datetime` | Horodatage de modification disponible | Aide à la sélection d'une déclaration de référence |
+| `score_completude` | `bigint` | Score de complétude calculé | Aide à l'évaluation de la qualité des déclarations |
+| `nombre_declarations` | `bigint` | Nombre de déclarations associées à l'identifiant | Analyse des déclarations multiples |
+| `conflit_adresse` | `int` | Indicateur de conflit d'adresse | Contrôle qualité |
+| `conflit_puissance` | `int` | Indicateur de conflit de puissance | Contrôle qualité |
+| `conflit_station` | `int` | Indicateur de conflit sur les informations de station | Contrôle qualité |
+| `conflit_coordonnees` | `int` | Indicateur de conflit de coordonnées | Contrôle qualité |
 
 ## Qualité et interprétation
 
