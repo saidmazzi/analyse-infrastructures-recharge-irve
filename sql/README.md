@@ -4,7 +4,7 @@ Ce dossier regroupe les scripts SQL utilisés pour préparer et contrôler les d
 
 ## Organisation prévue
 
-- `01_exploration.sql` : exploration initiale et vérification de la structure des données.
+-- `01_exploration.sql` : exploration des données, vérification de leur qualité et calcul des statistiques de puissance par cluster IRVE.
 - `02_nettoyage.sql` : préparation et nettoyage des données.
 - `03_controles_qualite.sql` : contrôles des doublons, valeurs manquantes et incohérences.
 - `04_verification_finale.sql` : vérification des résultats de la table analytique.
