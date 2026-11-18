@@ -14,4 +14,4 @@ Une analyse exploratoire complémentaire a également été réalisée :
 
 4. **Clustering des puissances** : regroupement exploratoire des points de charge selon leur puissance nominale, avec visualisation des clusters et comparaison de leurs statistiques.
 
-L'histoire Tableau permet de parcourir les analyses principales dans un ordre logique. Le dashboard de clustering complète cette exploration en proposant une lecture statistique des profils de puissance.
+Les classeurs Tableau Desktop ne sont pas encore inclus dans ce dépôt. Les captures des tableaux de bord sont disponibles dans le dossier `images/` pour illustrer les analyses réalisées.
