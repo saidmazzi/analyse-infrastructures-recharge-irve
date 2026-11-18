@@ -102,4 +102,4 @@ Les statistiques ci-dessous sont calculées après exclusion des points dont la 
 
 Cette segmentation est exploratoire. Les groupes sont issus du clustering automatique de Tableau et ne correspondent pas nécessairement à des catégories réglementaires officielles.
 
-Les effectifs présentés ici diffèrent de ceux du clustering initial, car les points de puissance nulle ont été exclus pour calculer les statistiques descriptives.
+Les effectifs présentés ici diffèrent de ceux du clustering initial, car les statistiques descriptives sont calculées uniquement sur les points dont la puissance nominale est strictement positive. Le périmètre initial du clustering dans Tableau peut donc différer du périmètre utilisé pour ces statistiques.
